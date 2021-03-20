@@ -5,10 +5,175 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"/>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    now we are starting code hold on this is just a text
     <script src="js/main.js"></script>
+    <div class="mob-header">
+      <div class="d-flex">
+        <div class="navbar-brand">
+          <a href="">
+            <img src="" alt="" />
+          </a>
+        </div>
+        <button class="toggler-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <header class="header-left" id="navbar-collapse-toggle">
+      <div class="top">
+        <a href="">M</a>
+      </div>
+
+      <ul class="nav nav-menu">
+        <li>
+          <a href="" class="nav-link active" data-toggle="tooltip" title="HOME">
+            <i class="fa fa-user-o"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" class="nav-link" data-toggle="tooltip" title="ABOUT">
+            <i class="fa fa-address-book-o"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" class="nav-link" data-toggle="tooltip" title="RESUME">
+            <i class="fa fa-file-word-o"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" class="nav-link" data-toggle="tooltip" title="WORK">
+            <i class="fa fa-wpexplorer"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" class="nav-link" data-toggle="tooltip" title="BLOG">
+            <i class="fa fa-rss"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" class="nav-link" data-toggle="tooltip" title="CONTACT">
+            <i class="fa fa-volume-control-phone"></i>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="banner">
+        <div class="top-fixed d-flex">
+          <div class="info">
+            <label>+91 5452452484</label>
+            <label>designer@gmail.com</label>
+          </div>
+          <div class="social">
+            <a href="">
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-linkedin"></i>
+              <i class="fa fa-bahance"></i>
+              <i class="fa fa-dribbble"></i>
+              <i class="fa fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row full-screen align-items-center">
+            <div class="col-lg-7">
+              <div class="box">
+                <h6>Hello, My Name is</h6>
+                <h1>Mohogni Gary</h1>
+                <p class="lead">
+                  Full-stack Developer | UX/UI Designer | Freelancer
+                </p>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                  optio recusandae officiis, suscipit doloremque numquam
+                  inventore fugiat eveniet provident aliquam quaerat earum
+                  debitis ex perspiciatis beatae, quas repudiandae architecto
+                  repellendus.
+                </p>
+                <div class="btn-bar">
+                  <a href="">Download CV</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="me" style="background-image: url(9.png)"></div>
+      </section>
+    </main>
+
+
+    <br> <br> <br> <br>
+    <select id="about" >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="about-me">
+              <div class="img">
+                <img src="about-me.jpg.png" alt="">
+              </div>
+              <div class="nav social-icons justify-content-center">
+                <a href=""><i class="fa fa-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </select>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
+
+    <script>
+      (function ($) {
+        "use strict";
+        var NAY = {};
+        NAY.MenuTogglerClose = function () {
+          $(".toggler-menu").on("click", function () {
+            $(".header-left").stop().toogleClass("menu-open");
+          });
+
+          $(".header-left a").on("click", function () {
+            var toogle = $(".toggler-menu");
+          });
+        };
+
+        $(document).on("ready", function () {
+          NAY.MenuTogglerClose();
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>
